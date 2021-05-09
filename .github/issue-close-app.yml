@@ -1,0 +1,28 @@
+# Comment that will be sent if an issue is judged to be closed.
+comment: >
+  Hello!
+  
+  Your suggestion request has been automatically closed as it does not follow the template required.
+  It is important that you provide us with information we request so we can fully understand your request
+  without confusion and impliment it effectively. Please resubmit your suggestion by following the correct template.
+  
+issueConfigs:
+# There can be several configs for different kind of issues.
+- content:
+# Example 1: bug report
+  - "What your suggestion?"
+  - "Which server is your suggestion for?"
+# Optional configuration:
+#
+# whether the keywords are case-insensitive
+# default value is false, which means keywords are case-sensitive
+caseInsensitive: false
+# the label that will be added when the bot close an issue
+# The bot will only add a label if this property is set.
+label: "invalid"
+# The bot will ignore any issues that are opened or reopened by the user names in exception
+exception:
+  - "HackuJacku"
+  - "Rasgnarok"
+# The issue is judged to be legal if it includes all keywords from any of these two configs.
+# Or it will be closed by the app.
